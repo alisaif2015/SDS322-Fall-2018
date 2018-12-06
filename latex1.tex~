@@ -1,0 +1,7 @@
+\documentclass{article}
+
+% C-c C-o make a block
+
+\begin{document}
+this is text.
+\end{document}

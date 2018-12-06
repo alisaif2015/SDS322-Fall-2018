@@ -1,0 +1,51 @@
+#include <iostream> 
+#include <cmath>
+using std::cout;
+using std::endl;
+using std::cin; 
+
+/*
+This function called primeTest takes an integer value from the main function
+and returns a value of 0 (True) if the integer value is a prime and a value of 1 (False) if the value is not a prime  
+*/
+
+int primeTest (int integer) {
+
+  bool isPrime = true;
+
+  /*Use sqrt of n as an upper bound because no two numbers can multiply
+  to a number "n" without one of the numbers being less than the sqrt
+  of the number. Hence you can find a multiple of a number below its
+  sqrt making the search faster
+  */
+  for (int n = 2; n <= sqrt(integer); n++) { 
+    if (integer % n == 0) 
+      {
+	isPrime = false;
+	break;
+      }
+  }
+  return isPrime;
+}
+
+
+
+
+
+
+int main () {
+  cout << "Enter a Number: ";
+    int number;
+  cin >> number;
+  int numberOfPrimesFound = 0;
+  for (int n = 2; ;n++) {
+    if (primeTest(n) == 1) {
+      numberOfPrimesFound += 1;
+      if (numberOfPrimesFound <= number) {
+      	cout << n << endl;
+      }    
+      else 
+	break;
+    }
+  }
+} 

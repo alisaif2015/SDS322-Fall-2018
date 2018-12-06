@@ -1,0 +1,25 @@
+#include <iostream> 
+#include <string>
+#include <cmath>
+#include <vector>
+using std::vector;
+using std::cout;
+using std::endl;
+using std::cin;
+using std::string;
+
+int main () {
+  vector<float> x {1,-4,2,-6,5};
+  for (auto squaredX : x) {
+  squaredX = squaredX * squaredX;
+  cout << squaredX <<endl;
+  int counter = 0;
+  while (counter <= 5 ) {
+    int sumX = 0;
+    sumX += squaredX[int i++];
+    counter +=1;
+    cout <<sumX<<endl;
+  }
+  }
+}
+    

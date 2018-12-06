@@ -1,0 +1,14 @@
+program new
+
+implicit none
+
+type Point 
+real :: x, y
+end type Point
+
+type(Point) :: p1,p2
+
+p1 = Point(1,1)
+p2 = Point(3,3)
+
+

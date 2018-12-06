@@ -1,0 +1,19 @@
+program loops
+
+  implicit none
+
+  real :: userInput,looper
+  integer :: flagger, factor
+  print *,"Enter a number to test primality: "  read *, userInput
+  flagger = 5
+  do looper = 2, (userInput**0.5) 
+     if (mod(userInput,looper) == 0) then
+        factor = looper
+        flagger = 10
+        exit
+     end if
+  end do
+  if (flagger == 10) then
+     print *, factor
+  end if
+end program loops

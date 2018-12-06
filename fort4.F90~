@@ -1,0 +1,23 @@
+program primes
+ 
+  implicit none
+  logical :: isprime
+  integer :: num
+  read *, num
+  isprime = primess(num)
+  contains
+    logical function primess(num)
+      integer :: counter,num
+      counter = 2
+      primess = .False.
+      do while (counter < num)
+         if (mod(num,counter) == 0) then
+            primess = .True. 
+            exit
+         else 
+            counter = counter + 1
+         end if
+      end do
+    end function primess
+  end program primes
+            

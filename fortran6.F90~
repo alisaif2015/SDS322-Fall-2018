@@ -1,0 +1,16 @@
+program Fizzbuzz
+
+  implicit none
+  integer :: a , b 
+  print *, "Enter an integer: "
+  read *, a
+  if 
+  print *, "FizzBuzz"
+  else if !its a multiple of 3 then
+     print *, "Fizz"
+  else if !its a multiple of 5 then 
+     print *, "Buzz"
+  end if
+
+end program 
+  

@@ -1,0 +1,30 @@
+program typers
+
+  implicit none
+  real:: areas
+  type point 
+     real :: x,y
+  end type point
+  type Rectangle
+     type(point)::p1,p2
+  end type Rectangle
+  type(rectangle) :: rect1
+  areas = Area(rect1)
+  print *, areas
+contains 
+
+  real function Area(rect1)
+    type(point)::p1,p2,poin1,poin2
+    type(rectangle)::rect1
+    real :: length,width
+    p1 = point(1,1)
+    p2 = point(5,5)
+    rect1 = rectangle(p1,p2)
+    poin1 = rect1%p1
+    poin2 = rect1%p2
+    length = poin2%y - poin1%y
+    width = poin2%x - poin1%y
+    print *, width
+    Area = length * width
+  end function Area
+end program typers

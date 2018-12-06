@@ -1,0 +1,47 @@
+#include <iostream> 
+#include <cmath>
+using std::cout;
+using std::endl;
+using std::cin;
+
+struct primeSequence  {
+  int numberOfPrimesFound = 0;
+ int lastNumberTested = 2;
+}; 
+
+int primeTest (struct primeSequence sequence){
+  bool isPrime = true;
+  for (int number = 2; number <= sqrt(sequence.lastNumberTested); number++) {
+      if (sequence.lastNumberTested % number == 0){
+	isPrime = false;
+	break;
+      }
+    }
+	 return isPrime;
+}
+
+int nextprime(struct primeSequence sequence){
+  if (primeTest(sequence)){
+    int prime = sequence.lastNumberTested;
+    sequence.lastNumberTested += 1;
+    sequence.numberOfPrimesFound += 1;
+    return prime;
+  }
+}
+ 
+int main() {
+  cout <<"Enter number of primes ";
+  int nprimes;
+  cin >> nprimes;
+  struct primeSequence sequence;
+  while (sequence.numberOfPrimesFound < nprimes) {
+    int number = nextprime (sequence);
+    cout << "Number " << number << " is prime" << endl;
+  }
+}
+
+
+
+
+      
+      

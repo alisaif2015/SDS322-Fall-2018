@@ -1,0 +1,27 @@
+#include <iostream> 
+#include <string>
+#include <cmath>
+#include <vector>
+#include <iomanip>
+using std::setbase;
+using std::setfill;
+using std::vector;
+using std::cout;
+using std::endl;
+using std::cin;
+using std::string;
+using std::right;
+using std::left;
+
+
+
+
+int main() {
+auto
+  first = make_shared<Node>(23),
+  second = make_shared<Node>(45),
+  third = make_shared<Node>(32);
+ first->append(second);
+ first->append(third);
+ first->print();
+}

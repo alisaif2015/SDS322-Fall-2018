@@ -1,0 +1,26 @@
+#include <iostream> 
+#include <cmath>
+using std::cout;
+using std::endl;
+using std::cin; 
+
+int primeTest (int integer) {
+
+  bool isPrime = true;
+  
+  for (int n = 2; n <= integer/2; n++) {
+    
+    if (integer % n == 0) 
+      {
+	isPrime = false;
+	break;
+}
+  }
+  return isPrime;
+}
+int main () {
+  cout << "Enter a Number: "<< endl;
+    int number;
+  cin >> number;
+  cout << primeTest(number)<< endl;
+} 

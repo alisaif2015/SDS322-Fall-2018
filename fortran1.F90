@@ -1,0 +1,8 @@
+program hello
+
+implicit none
+
+print *, "hello world" ; print *, "hello world"
+
+print *, "hello world"
+end program hello
